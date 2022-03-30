@@ -16,7 +16,7 @@ public class Sketch extends PApplet {
    * values here i.e background, stroke, fill etc.
    */
   public void setup() {
-    background(210, 255, 173);
+    background(255, 255, 255);
   }
 
   /**
@@ -24,13 +24,68 @@ public class Sketch extends PApplet {
    */
   public void draw() {
 	  
-	// sample code, delete this stuff
-    stroke(128);
-    line(150, 25, 270, 350);  
+	// Draw top left
+    
+    fill(200, 200, 200);
+  
+    for (int lineX = 20; lineX <= 200; lineX += 20) {
+    line(lineX, 0, lineX, 200);
+      }
 
-    stroke(255);
-    line(50, 125, 70, 50);  
-  }
+    fill(200, 200, 200);
+    
+    for (int lineY = 20; lineY <= 200; lineY += 20) {
+    line(0, lineY, 200, lineY);
+    }
+
+
+    //Draw top right 
+
+    
+    fill(200, 200, 200);
+    
+    for (int circleX = 220; circleX <= 400; circleX += 40) {
+    
+
+    for (int circleY = 10; circleY <= 200; circleY += 40) {
+    ellipse(circleX, circleY, 20, 20);
+      }
+
+
+    //Draw Bottom Left
+
+    strokeWeight((float) 0.002 * height);
+
+    for (int i = 0; i <= height/2; i++) {
+    stroke(i,i,i);
+    line(i, height/(float) 2.2, i, height);
+
+    }
+    //Draw Bottom Right
+
+
+    for(int intAngle = 0; intAngle < 360; intAngle +=45) {
+    fill(119, 0, 125);
+    stroke(0, 50, 0);
+    strokeWeight((float) 0.004 * height);
+
+    pushMatrix();
+    translate((width/2)+width/4, (height/2)+ height/4 );
+    rotate(radians(intAngle));
+    ellipse(0, 0, height/20, height/3);
+    popMatrix();
+      }
+
+    fill(3, 7, 252);
+    noStroke();
+    ellipse((width/2)+width/4, (height/2)+ height/4 , 50, 50);
+
+      
+
+
+
+      }
+    }
   
   // define other methods down here.
 }
