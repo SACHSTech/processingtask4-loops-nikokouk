@@ -24,7 +24,7 @@ public class Sketch extends PApplet {
    */
   public void draw() {
 	  
-	// Draw top left
+	// Draw top left quad
     
     fill(200, 200, 200);
   
@@ -39,20 +39,9 @@ public class Sketch extends PApplet {
     }
 
 
-    //Draw top right 
-
-    
-    fill(200, 200, 200);
-    
-    for (int circleX = 220; circleX <= 400; circleX += 40) {
     
 
-    for (int circleY = 10; circleY <= 200; circleY += 40) {
-    ellipse(circleX, circleY, 20, 20);
-      }
-
-
-    //Draw Bottom Left
+    //Draw Bottom Left quad
 
     strokeWeight((float) 0.002 * height);
 
@@ -61,7 +50,7 @@ public class Sketch extends PApplet {
     line(i, height/(float) 2.2, i, height);
 
     }
-    //Draw Bottom Right
+    //Draw Bottom Right quad
 
 
     for(int intAngle = 0; intAngle < 360; intAngle +=45) {
@@ -80,7 +69,18 @@ public class Sketch extends PApplet {
     noStroke();
     ellipse((width/2)+width/4, (height/2)+ height/4 , 50, 50);
 
-      
+    //Draw top right quad
+
+    
+    fill(200, 200, 200);
+    
+    for (int circleX = 220; circleX <= 400; circleX += 40) {
+    
+
+    for (int circleY = 10; circleY <= 200; circleY += 40) {
+    ellipse(circleX, circleY, 20, 20);
+      }
+
 
 
 
